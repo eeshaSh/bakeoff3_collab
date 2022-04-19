@@ -19,7 +19,17 @@ final float sizeOfInputArea = DPIofYourDeviceScreen*1; //aka, 1.0 inches square!
 PImage watch;
 
 //Variables for my silly implementation. You can delete this:
-char currentLetter = 'a';
+char currentLetter = '_';
+
+String button1 = "";
+String button2 = "";
+String button3 = "";
+String button4 = "";
+String button5 = "";
+String button6 = "";
+String button7 = "";
+String button8 = "";
+String button9 = "";
 
 //You can modify anything in here. This is just a basic implementation.
 void setup()
@@ -80,10 +90,67 @@ void draw()
     text("NEXT > ", 650, 650); //draw next label
 
     //my draw code
-    fill(255, 0, 0); //red button
-    rect(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+sizeOfInputArea/2, sizeOfInputArea/2, sizeOfInputArea/2); //draw left red button
-    fill(0, 255, 0); //green button
-    rect(width/2-sizeOfInputArea/2+sizeOfInputArea/2, height/2-sizeOfInputArea/2+sizeOfInputArea/2, sizeOfInputArea/2, sizeOfInputArea/2); //draw right green button
+    stroke(255);
+    
+    fill(153);
+    rect(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+2*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 1
+    rect(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+2*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 2
+    rect(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+2*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 3
+    
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("abc",width/2-sizeOfInputArea/2+3*sizeOfInputArea/6, height/2-sizeOfInputArea/2+11*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("def",width/2-sizeOfInputArea/2+5*sizeOfInputArea/6, height/2-sizeOfInputArea/2+11*sizeOfInputArea/24);
+    
+    fill(153);
+    rect(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+3*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 4
+    rect(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+3*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 5
+    rect(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+3*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 6
+    
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("ghi",width/2-sizeOfInputArea/2 + 1*sizeOfInputArea/6, height/2-sizeOfInputArea/2+15*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("jkl",width/2-sizeOfInputArea/2+3*sizeOfInputArea/6, height/2-sizeOfInputArea/2+15*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("mno",width/2-sizeOfInputArea/2+5*sizeOfInputArea/6, height/2-sizeOfInputArea/2+15*sizeOfInputArea/24);
+    
+    fill(153);
+    rect(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+4*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 7
+    rect(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+4*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 8
+    rect(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+4*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 9
+    fill(255,255,255);
+    
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("pqrs",width/2-sizeOfInputArea/2 + 1*sizeOfInputArea/6, height/2-sizeOfInputArea/2+19*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("tuv",width/2-sizeOfInputArea/2+3*sizeOfInputArea/6, height/2-sizeOfInputArea/2+19*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("wxyz",width/2-sizeOfInputArea/2+5*sizeOfInputArea/6, height/2-sizeOfInputArea/2+19*sizeOfInputArea/24);
+    
+    
+    fill(153);
+    rect(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 10
+    rect(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 11
+    rect(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button
+    
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("Del",width/2-sizeOfInputArea/2 + 1*sizeOfInputArea/6, height/2-sizeOfInputArea/2+23*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("Space",width/2-sizeOfInputArea/2+3*sizeOfInputArea/6, height/2-sizeOfInputArea/2+23*sizeOfInputArea/24);
+    textAlign(CENTER);
+    fill(255,255,255);
+    text("Enter",width/2-sizeOfInputArea/2+5*sizeOfInputArea/6, height/2-sizeOfInputArea/2+23*sizeOfInputArea/24);
+    
     textAlign(CENTER);
     fill(200);
     text("" + currentLetter, width/2, height/2-sizeOfInputArea/4); //draw current letter
@@ -96,33 +163,152 @@ boolean didMouseClick(float x, float y, float w, float h) //simple function to d
   return (mouseX > x && mouseX<x+w && mouseY>y && mouseY<y+h); //check to see if it is in button bounds
 }
 
+int prevClick = -1;
+int clickCount = 0;
 //my terrible implementation you can entirely replace
 void mousePressed()
 {
-  if (didMouseClick(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+sizeOfInputArea/2, sizeOfInputArea/2, sizeOfInputArea/2)) //check if click in left button
+  
+  
+  // button1:
+  if (didMouseClick(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+2*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
   {
-    currentLetter --;
-    if (currentLetter<'_') //wrap around to z
-      currentLetter = 'z';
+    prevClick =1;
   }
-
-  if (didMouseClick(width/2-sizeOfInputArea/2+sizeOfInputArea/2, height/2-sizeOfInputArea/2+sizeOfInputArea/2, sizeOfInputArea/2, sizeOfInputArea/2)) //check if click in right button
+  
+  // button2: abc
+  if (didMouseClick(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+2*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
   {
-    currentLetter ++;
-    if (currentLetter>'z') //wrap back to space (aka underscore)
-      currentLetter = '_';
+    if(prevClick == 2){
+      currentLetter++;
+    }else{
+      currentLetter = 'a';
+    }
+    if (currentLetter>'c') //wrap around to z
+      currentLetter = 'a';
+    prevClick = 2;
   }
-
-  if (didMouseClick(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2, sizeOfInputArea, sizeOfInputArea/2)) //check if click occured in letter area
+  
+  // button3: def
+  if (didMouseClick(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+2*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
   {
-    if (currentLetter=='_') //if underscore, consider that a space bar
-      currentTyped+=" ";
-    else if (currentLetter=='`' & currentTyped.length()>0) //if `, treat that as a delete command
+    if(prevClick == 3){
+      currentLetter++;
+    }else{
+      currentLetter = 'd';
+    }
+    if (currentLetter>'f') //wrap around to z
+      currentLetter = 'd';
+    prevClick = 3;
+  }
+  
+  // button4: ghi
+  if (didMouseClick(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+3*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
+  {
+    if(prevClick == 4){
+      currentLetter++;
+    }else{
+      currentLetter = 'g';
+    }
+    if (currentLetter>'i') //wrap around to z
+      currentLetter = 'g';
+    prevClick = 4;
+  }
+  
+  // button5: jkl
+  if (didMouseClick(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+3*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
+  {
+    if(prevClick == 5){
+      currentLetter++;
+    }else{
+      currentLetter = 'j';
+    }
+    if (currentLetter>'l') //wrap around to z
+      currentLetter = 'j';
+    prevClick = 5;
+  }
+  
+  // button6: mno
+  if (didMouseClick(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+3*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
+  {
+    if(prevClick == 6){
+      currentLetter++;
+    }else{
+      currentLetter = 'm';
+    }
+    if (currentLetter>'o') //wrap around to z
+      currentLetter = 'm';
+    prevClick = 6;
+  }
+  
+  // button7: pqrs
+  if (didMouseClick(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+4*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
+  {
+    if(prevClick == 7){
+      currentLetter++;
+    }else{
+      currentLetter = 'p';
+    }
+    if (currentLetter>'s') //wrap around to z
+      currentLetter = 'p';
+    prevClick = 7;
+  }
+  
+  // button8: tuv
+  if (didMouseClick(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+4*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
+  {
+    if(prevClick == 8){
+      currentLetter++;
+    }else{
+      currentLetter = 't';
+    }
+    if (currentLetter>'v') //wrap around to z
+      currentLetter = 't';
+    prevClick = 8;
+  }
+  
+  // button9: wxyz
+  if (didMouseClick(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+4*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)) //check if click in left button
+  {
+    if(prevClick == 9){
+      currentLetter++;
+    }else{
+      currentLetter = 'w';
+    }
+    if (currentLetter>'z') //wrap around to z
+      currentLetter = 'w';
+    prevClick = 9;
+  }
+  
+  // button10: Delete
+  if (didMouseClick(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6) ) //check if click in left button
+  {
+    currentLetter = '`';
+    if (currentTyped.length()>0)
       currentTyped = currentTyped.substring(0, currentTyped.length()-1);
-    else if (currentLetter!='`') //if not any of the above cases, add the current letter to the typed string
+    prevClick = 10;
+  }
+  
+  // button11: Space
+  if (didMouseClick(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6) ) //check if click in left button
+  {
+    currentLetter = '_';
+    currentTyped+=" ";
+    prevClick = 11;
+  }
+  
+  //button 12: Enter
+  if(didMouseClick(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6)){
+    //currentTyped+=currentLetter;
+    if (currentLetter!='_' && currentLetter!='`') //if underscore, consider that a space bar
       currentTyped+=currentLetter;
+    
+    clickCount = 0;
+    prevClick = 12;
+
   }
 
+ 
   //You are allowed to have a next button outside the 1" area
   if (didMouseClick(600, 600, 200, 200)) //check if click is in next button
   {
@@ -203,10 +389,6 @@ void drawWatch()
   image(watch, 0, 0);
   popMatrix();
 }
-
-
-
-
 
 //=========SHOULD NOT NEED TO TOUCH THIS METHOD AT ALL!==============
 int computeLevenshteinDistance(String phrase1, String phrase2) //this computers error between two strings
