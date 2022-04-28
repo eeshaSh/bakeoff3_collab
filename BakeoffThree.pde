@@ -136,7 +136,7 @@ void draw()
     text("wxyz",width/2-sizeOfInputArea/2+5*sizeOfInputArea/6, height/2-sizeOfInputArea/2+19*sizeOfInputArea/24);
     
     
-    fill(153);
+    fill(0,0,0);
     rect(width/2-sizeOfInputArea/2, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 10
     rect(width/2-sizeOfInputArea/2+sizeOfInputArea/3, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button 11
     rect(width/2-sizeOfInputArea/2+2*sizeOfInputArea/3, height/2-sizeOfInputArea/2+5*sizeOfInputArea/6, sizeOfInputArea/3, sizeOfInputArea/6); //draw button
